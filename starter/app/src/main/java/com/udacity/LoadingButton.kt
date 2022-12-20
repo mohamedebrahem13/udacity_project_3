@@ -8,7 +8,7 @@ import android.graphics.Paint
 import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.View
-import android.view.animation.AccelerateInterpolator
+import android.view.animation.DecelerateInterpolator
 import kotlin.properties.Delegates
 
 class LoadingButton @JvmOverloads constructor(
@@ -66,7 +66,7 @@ class LoadingButton @JvmOverloads constructor(
                         duration = 3000
                         repeatCount = ValueAnimator.INFINITE
                         repeatMode = ValueAnimator.REVERSE
-                        interpolator = AccelerateInterpolator(1f)
+                        interpolator = DecelerateInterpolator(1f)
                         addUpdateListener { circleinimate ->
                             //  TO UPDATE THE CIRCLE ANGEL AND I USE IT IN drawanimaitedcircle() TO DRAW CIRCLE ANIMATION
                             circleAngel = animatedValue as Float
